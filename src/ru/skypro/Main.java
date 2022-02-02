@@ -6,7 +6,7 @@ public class Main {
 	// Задание 1
         byte clientOS = 0;
         byte iOS = 0;
-        byte Android = 0;
+        byte Android = 1;
 
         if (clientOS == iOS) {
             System.out.println("Установите версию приложения для iOS по ссылке");
@@ -30,27 +30,27 @@ public class Main {
         }
 
         // Задание 3
-        int year = 4000;
+        int year = 800;
 
         if (year % 4 == 0 && year % 100 != 0) {
             System.out.println(year + " год является високосным");
-        } else if (year % 4 == 0) {
+        } else if (year % 400 == 0) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
         }
 
         // Задание 4
-        byte deliveryDistance = 2;
-        byte day = 1;
+        int deliveryDistance = 2;
+        int day = 1;
 
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: " + day);
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            day = (byte) (day + 1);
+            day = day + 1;
             System.out.println("Потребуется дней: " + day);
         } else if (deliveryDistance > 60 && deliveryDistance <=100) {
-            day = (byte) (day + 2);
+            day = day + 2;
             System.out.println("Потребуется дней: " + day);
         }
         // Задание 5
