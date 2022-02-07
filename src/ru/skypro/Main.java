@@ -104,14 +104,15 @@ public class Main {
 
         float baseRate = 10;
         int loanTerms;
-        float maxMonthlyPayment = 50;
+        float maxMonthlyPaymentPercent = 50;
+        float maxMonthlyPayment;
 
         if (age < 23) {
             baseRate = baseRate + 1;
         } else if (age >= 23 && age < 30) {
             baseRate = (float) (baseRate + 0.5);
         }
-        maxMonthlyPayment = (maxMonthlyPayment / 100) * salary;
+        maxMonthlyPayment = (maxMonthlyPaymentPercent / 100) * salary;
         float monthlyRatePayment = (wantedSum * (baseRate / 100)) / 12;
         System.out.print("Максимальный платеж при ЗП " + salary + " равен " + maxMonthlyPayment + " рублей. Платеж по кредиту " + monthlyRatePayment + " рублей. ");
         if (maxMonthlyPayment >= monthlyRatePayment) {
